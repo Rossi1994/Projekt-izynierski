@@ -21,6 +21,7 @@ import com.vaadin.ui.declarative.Design;
 public class SpreadSheet extends AbsoluteLayout {
 	protected Button addButton;
 	protected Grid spreadSheet;
+	protected Button addButton2;
 
 	public SpreadSheet() {
 		Design.read(this);

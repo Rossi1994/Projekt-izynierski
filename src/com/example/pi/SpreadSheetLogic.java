@@ -15,34 +15,59 @@ public class SpreadSheetLogic extends SpreadSheet {
 
 	SpreadSheetLogic()
 	{
-		HeaderRow1 = spreadSheet.prependHeaderRow();
+		
 		mainHeaderRow = spreadSheet.prependHeaderRow();
 
 		
+		spreadSheet.setColumnReorderingAllowed(true);
+		
 		spreadSheet.addColumn("Przedmiot", String.class);
-		spreadSheet.addColumn("Cecha1", String.class);
-		spreadSheet.addColumn("Cecha2", String.class);
+		spreadSheet.addColumn(propertyId++);
+		spreadSheet.addColumn(propertyId++);
+		spreadSheet.getColumn(propertyId-2).setHeaderCaption("Cecha1");
+		spreadSheet.getColumn(propertyId-1).setHeaderCaption("Cecha2");
 		
 		for(int i = 0; i< 10; i++){
 			spreadSheet.addRow(null, null, null);
 		}
 		
 		properties = new ArrayList<>();
-		properties.add(mainHeaderRow.getCell("Cecha1"));
-		properties.add(mainHeaderRow.getCell("Cecha2"));
+		properties.add(mainHeaderRow.getCell(propertyId-2));
+		properties.add(mainHeaderRow.getCell(propertyId-1));
 		HeaderCell hed = mainHeaderRow.getCell("Przedmiot");
 		
-		HeaderCell mainHeaderCell = mainHeaderRow.join(properties.get(0), properties.get(1));
+		 mainHeaderCell = mainHeaderRow.join(properties.get(0), properties.get(1));
 		
 		hed.setText("Przedmioty");
-		mainHeaderCell.setText("Osoba");
+		mainHeaderCell.setText("Osoba1");
 		addPerson();
-	}
+		addProperty();
+		
+		}
 	
+	void hidePerson()
+	{
+		
+		
+		
+	}
 	
 	void addProperty()
 	{
+		//for(int i=1; i<=propertyId/2;i++)
+	//	{
+		//	spreadSheet.addCol
+	//	}
 		
+		
+		
+		addButton2.addClickListener(new Button.ClickListener() {
+		    public void buttonClick(ClickEvent event) {
+		    	
+		    	spreadSheet.addColumn(2313131);
+		    	properties.add(mainHeaderRow.getCell(2313131));
+		    	mainHeaderCell= mainHeaderRow.join(mainHeaderCell, properties.get(2));
+		    }});
 	}
 	
 	void addPerson()
@@ -50,20 +75,22 @@ public class SpreadSheetLogic extends SpreadSheet {
 		
 			addButton.addClickListener(new Button.ClickListener() {
 			    public void buttonClick(ClickEvent event) {
-			    	spreadSheet.addColumn("Cecha11", String.class);
-					spreadSheet.addColumn("Cecha22", String.class);
-					Column c = spreadSheet.getColumn("Cecha11");
-					//c.setHeaderCaption("Cecha1");
-					c.setHeaderCaption(null);
-			    	HeaderCell x = mainHeaderRow.join("Cecha11", "Cecha22");
-			    	x.setText("Osobax");
+			    	spreadSheet.addColumn(propertyId++);
+					spreadSheet.addColumn(propertyId++);
+					spreadSheet.getColumn(propertyId-2).setHeaderCaption("Cecha1");
+					spreadSheet.getColumn(propertyId-1).setHeaderCaption("Cecha2");
+					HeaderCell x = mainHeaderRow.join(propertyId-2, propertyId-1);
+			    	x.setText("Osoba" + (propertyId/2));
 			    }});
-			
-	}
+		}
 	
+	
+	
+	private HeaderCell mainHeaderCell;
 	
 	private HeaderRow mainHeaderRow;
-	private HeaderRow HeaderRow1;
 	private ArrayList<HeaderCell> properties;
+	private static int propertyId;
 	
-}
+	static int idd;
+	}
