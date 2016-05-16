@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
 <head>
-<meta charset="ASCII">
+<meta charset="UTF-8">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Sebastian Stachowiak">
 <meta name="description" content="UAM Engineer">
 <link rel="stylesheet" type="text/css" href="scripts/CSS.css">
-<title>Engeneer Project</title>
 <script type="text/Javascript" src="scripts/JS.js">
 </script>
+<title>Engeneer Project</title>
 </head>
 <body>
 <div id="header">
@@ -20,8 +20,8 @@
 <form method="get">
 <table width="100%" height="100%">
 <tr height="80%">
-<th height="80%" width="20%">
-<button id="ark" class="button" type="submit" formaction="Arkusz.html">Stw�rz arkusz</button>
+<th height="80%" width="20%" valign="top">
+<button id="ark" class="button" type="submit" formaction="Arkusz.html">Stwórz arkusz</button>
 <br><br>
 <button id="sz" class="button" type="submit" formaction="Wczytaj.html">Wczytaj szablon</button>
 <br><br>
@@ -29,20 +29,38 @@
 <br><br>
 <button id="bad1" class="button" type="submit" formaction="Wybierz_badanie2.html">Zlecone badania</button>
 </th>
-<th height="80%" width="20%" align="left" valign="top">
-<p id="content">
-Liczba operator�w:<br><br>
-Liczba cech:<br><br>
-Liczba powt�rze�:<br><br>
-Liczba produkt�w:<br><br>
+<th height="80%" width="40%" align="left" valign="top">
+<p id="content" class="content">
+Liczba operatorów:<br><br><br>
+Liczba cech:<br><br><br>
+Liczba produktów:<br><br><br>
+Liczba powtórzeń:<br><br><br>
+Tytuł:<br><br><br>
+Nazwa firmy/wydział:<br><br><br>
+Data:<br><br><br>
+Odpowiedzialny:<br><br><br>
+Klient:<br><br><br>
+Proces:<br><br><br>
+Stanowisko:<br><br><br>
+Nazwa części:<br><br><br>
+Nazwa elementu:<br><br><br>
 </p>
 </th>
-<th height="80%" width="60%" align="left" valign="top">
+<th height="80%" width="40%" align="left" valign="top">
 <p id="content1">
-<input type="number" name="quantity" min="3" class="input"><br><br>
-<input type="text" name="liczbaCech" class="input"><br><br>
-<input type="text" name="liczbaPowt" class="input"><br><br>
-<input type="text" name="liczbaProd" class="input"><br><br>
+<input type="number" name="liczbaOper" min="1" class="input input2" placeholder="Liczba operatorów"><br><br>
+<input type="number" name="liczbaCech" min="1" class="input input2" placeholder="Liczba cech"><br><br>
+<input type="number" name="liczbaProd" min="5" class="input input2" placeholder="Liczba produktow"><br><br>
+<input type="number" name="liczbaPowt" min="1" class="input input2" placeholder="Liczba powtorzen"><br><br>
+<input type="text" name="tyt" min="1" class="input input2" placeholder="Tytuł"><br><br>
+<input type="text" name="nam" min="1" class="input input2" placeholder="Nazwa firmy/wydział"><br><br>
+<input type="date" name="data" min="1" class="input input2" placeholder="Data"><br><br>
+<input type="text" name="odp" min="1" class="input input2" placeholder="Odpowiedzialny"><br><br>
+<input type="text" name="cli" min="1" class="input input2" placeholder="Klient"><br><br>
+<input type="text" name="pro" min="1" class="input input2" placeholder="Proces"><br><br>
+<input type="text" name="stan" min="1" class="input input2" placeholder="Stanowisko"><br><br>
+<input type="text" name="part" min="1" class="input input2" placeholder="Nazwa części"><br><br>
+<input type="text" name="elem" min="1" class="input input2" placeholder="Nazwa elementu"><br><br>
 </p>
 </th>
 </tr>
@@ -64,7 +82,7 @@ Liczba produkt�w:<br><br>
 </div>
 
 <div id="footer">
-Copyright � UAM
+UAM
 </div>
 </body>
 </html>
