@@ -22,19 +22,25 @@ FUNKCJONALNOŚĆ BAZODANOWA:
 - przypisanie arkusza [przypiszArkusz] przy zleceniu badania oraz przy zleceniu raportu
 - w przypadku braku dodania daty badania, bądź stworzenia arkusza domyślnie wpisywana data dzisiejsza [ustawDate]
 - przypisanie raportu do arkusza [przypiszRaportDoArkusza]
-- w przypadku stworzenia nowego arkusza automatycznie do nazwy jest dodawane id_arkusza [dodajId] (aby nie występowały problemy z zapisem arkuszy z tymi samymi nazwami na dysku w tym samym miejscu) DOTYCZY TAKŻE PRZEDMIOTÓW!
+- w przypadku stworzenia nowego arkusza automatycznie do nazwy jest dodawane id_arkusza [dodajId] (aby nie występowały problemy z 
+zapisem arkuszy z tymi samymi nazwami na dysku w tym samym miejscu) DOTYCZY TAKŻE PRZEDMIOTÓW!
 - ustawianie firmy [ustawFirme] atrybut 'firma' w tabeli ARKUSZE jest ustawiane tylko raz (po pierwszym stworzeniu arkusza)
 //- w przypadku przeprowadzenia badania 
-- w przypadku stworzenia, bądź zapisania arkusza [dodajSpecjaliste] każdy nieistniejący w bazie, a występujący w arkuszu specjalista zostanie do niej wpisany
-- w przypadku zapisania arkusza [przypiszSpecjaliste] każdemu występującemu w tym arkuszu operatorowi, bądź ekspertowi zostanie przypisane id_arkusza
+- w przypadku stworzenia, bądź zapisania arkusza [dodajSpecjaliste] każdy nieistniejący w bazie, a występujący w arkuszu specjalista 
+zostanie do niej wpisany
+- w przypadku zapisania arkusza [przypiszSpecjaliste] każdemu występującemu w tym arkuszu operatorowi, bądź ekspertowi zostanie 
+przypisane id_arkusza
 - w przypadku zapisania arkusza [przypiszDecyzje] każda decyzja zawarta w tym arkuszu zostanie przypisana odpowiedniemu specjaliście
 - -||- [przypiszPrzedmioty] arkuszowi zostaną przypisane przedmioty (ich nazwy)
-- -||- [nowyPrzedmiot] gdy (zostanie zapisany arkusz = zostanie przeprowadzone badanie) to przedmioty wypisane w arkuszu znajdą się w bazie danych (grupa to 'nazwa części') typ oznacza 'łatwy' albo 'trudny'
+- -||- [nowyPrzedmiot] gdy (zostanie zapisany arkusz = zostanie przeprowadzone badanie) to przedmioty wypisane w arkuszu znajdą się w 
+bazie danych (grupa to 'nazwa części') typ oznacza 'łatwy' albo 'trudny'
 - -||- [przypiszCechy] przedmiotom w arkuszu zostaną przypisane cechy (id_cechy) (dla każdego przedmiotu w arkuszu oczywiście te same)
 - -||- [dodajCechy] pobierze z arkusza cechy i doda do bazy, jeżeli nie istnieją (sprawdzi nazwę)
 - -||- [przypiszSkale] dla każdej cechy zostanie przypisana nazwa (SKALA) jaka wystąpiła pod cechą w arkuszu
 - -||- [dodajSkale] zostaną dodane tylko te wartości cech (nazwy w SKALA), których nie ma w tabeli SKALA
 
 PROBLEMY:
-- Czy stanowisko to miejsce na którym odbywa się konkretne badanie, czy jest to miejsce na którym pracuje w danym badaniu konkretny operator?
-- Zakładam, że 'wczytanie szablonu' to wczytanie zapisanego już arkusza w celu edycji wpisanych już w nim danych, ale zapisanie go ponownie spowoduje tak naprawdę stworzenie zupełnie nowego arkusza?
+- Czy stanowisko to miejsce na którym odbywa się konkretne badanie, czy jest to miejsce na którym pracuje w danym badaniu konkretny 
+operator?
+- Zakładam, że 'wczytanie szablonu' to wczytanie zapisanego już arkusza w celu edycji wpisanych już w nim danych, ale zapisanie go 
+ponownie spowoduje tak naprawdę stworzenie zupełnie nowego arkusza?
