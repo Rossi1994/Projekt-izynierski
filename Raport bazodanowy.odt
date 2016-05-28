@@ -1,8 +1,8 @@
 FUNKCJONALNOŚĆ BAZODANOWA:
 
 1. Procedury i funkcje
-- logowanie [dodajUzytkownika]
-- rejestracja [rejestracjaUzytkownika]
+- logowanie [logowanieUzytkownika]
+- rejestracja [dodajUzytkownika]
 - tworzenia nowego arkusza [nowyArkusz] arkusze mogą mieć te same nazwy
 - usuwanie arkusza [usunArkusz]
 - tworzenie raportu [nowyRaport]
