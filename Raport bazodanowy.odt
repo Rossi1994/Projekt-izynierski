@@ -18,7 +18,6 @@ FUNKCJONALNOŚĆ BAZODANOWA:
 - zmiana nazwiska specjalisty [zmienNazwiskoSpecjalisty] administrator
 
 2. Triggery
-- dodawanie nowego klienta [nowyKlient] przy stworzeniu raportu
 - przypisanie arkusza [przypiszArkusz] przy zleceniu badania oraz przy zleceniu raportu
 - w przypadku braku dodania daty badania, bądź stworzenia arkusza domyślnie wpisywana data dzisiejsza [ustawDate]
 - przypisanie raportu do arkusza [przypiszRaportDoArkusza]
