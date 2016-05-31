@@ -18,11 +18,11 @@ FUNKCJONALNOŚĆ BAZODANOWA:
 - zmiana nazwiska specjalisty [zmienNazwiskoSpecjalisty] administrator
 - przypisanie arkusza [przypiszArkuszDoUzytkownika] przy zleceniu badania oraz przy zleceniu raportu 
 (zmieniamy rodzaj_arkusza na 'badanie')
+- przypisanie raportu do arkusza [przypiszRaportDoArkusza]
 - zleć badanie [zlecBadanie]
 
 2. Triggery
 - w przypadku braku dodania daty badania, bądź stworzenia arkusza domyślnie wpisywana data dzisiejsza [ustawDate]
-- przypisanie raportu do arkusza [przypiszRaportDoArkusza]
 - w przypadku stworzenia nowego arkusza automatycznie do nazwy jest dodawane id_arkusza [dodajId] (aby nie występowały problemy z 
 zapisem arkuszy z tymi samymi nazwami na dysku w tym samym miejscu) DOTYCZY TAKŻE PRZEDMIOTÓW!
 - ustawianie firmy [ustawFirme] atrybut 'firma' w tabeli ARKUSZE jest ustawiane tylko raz (po pierwszym stworzeniu arkusza)
