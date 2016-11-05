@@ -9,6 +9,23 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav) 
   $scope.arkuszUrl = 'arkusz.html';
   $scope.registryUrl = 'registry.html';
   $scope.startUrl = 'start.html';
+  $scope.loadUrl = 'load.html';
+//category//
+  $scope.categories = [
+          "Liczba operatorow",
+          "Liczba cech",
+          "Liczba produktow",
+          "Liczba powtorzen",
+		  "Tytuł",
+		  "Nazwa firmy/wydział",
+		  "Odpowiedzialny",
+		  "Klient",
+		  "Proces",
+		  "Data",
+		  "Stanowisko",
+		  "Nazwa części",
+		  "Nazwa elementu"
+      ];
 //layout//
   $scope.toggleSidenav = function(menuId) {
     $mdSidenav(menuId).toggle();

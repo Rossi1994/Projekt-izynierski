@@ -30,14 +30,14 @@
 
     <md-toolbar>
       <md-fab-actions class="md-toolbar-tools">
-        <md-button class="md-fab md-primary" ng-href="{{UAMUrl}}">
-			UAM
+        <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
+			<i class="material-icons md-24">settings_power</i>
 		</md-button>
 		<md-button class="md-fab md-primary" ng-href="{{WMIUrl}}">
 			WMI
 		</md-button>
-		<md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
-			<i class="material-icons md-24">settings_power</i>
+		<md-button class="md-fab md-primary" ng-href="{{UAMUrl}}">
+			UAM
 		</md-button>
       </md-fab-actions>
     </md-toolbar>
@@ -49,7 +49,7 @@
   <div layout="row" flex class="change-my-css">
     <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
 		<md-button ng-href="{{arkuszUrl}}">stworz arkusz</md-button>
-		<md-button>wczytaj szablon</md-button>
+		<md-button ng-href="{{loadUrl}}">wczytaj szablon</md-button>
 		<md-button>zlec badanie</md-button>
 		<md-button>przeprowadz badanie</md-button>
     </md-sidenav>
