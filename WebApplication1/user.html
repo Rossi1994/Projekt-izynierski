@@ -27,16 +27,26 @@
       </h1>
 	</div>
 	<div>
-	<section layout="row" layout-sm="column">
-	<md-button class="md-fab md-primary" ng-href="{{UAMUrl}}">
-        AMU
-	</md-button>
-    <md-button class="md-fab md-primary" ng-href="{{WMIUrl}}">
-		WMI
-	</md-button>
-    <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
-		<i class="material-icons md-24">settings_power</i>
-	</md-button>
+	<section layout="row">
+	<md-fab-speed-dial md-open="false" md-direction="left" ng-class="md-scale">
+		<md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-primary">
+            <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+          </md-button>
+        </md-fab-trigger>
+
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button class="md-fab md-primary md-mini" ng-href="{{loginUrl}}">
+			<i class="material-icons md-24">settings_power</i>
+		</md-button>
+		<md-button class="md-fab md-primary md-mini" ng-href="{{WMIUrl}}">
+			WMI
+		</md-button>
+		<md-button class="md-fab md-primary md-mini" ng-href="{{UAMUrl}}">
+			UAM
+		</md-button>
+      </md-fab-actions>
+	</md-fab-toolbar>
 	</section>
 	</div>
   </md-toolbar>

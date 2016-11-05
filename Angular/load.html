@@ -49,13 +49,15 @@
     <div>
 	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
       <form name="userForm">
-        <md-input-container style="margin-right: 10px;">
+        <md-input-container>
         <label>Szukaj po</label>
-        <md-select ng-model="category" name="category" required>
+        <md-select name="category" ng-model="category" required>
+		  <md-option value="">Empty</md-option>
           <md-option ng-repeat="category in categories" value="{{category}}">{{category}}</md-option>
         </md-select>
 		<div class="errors" ng-messages="userForm.category.$error">
           <div ng-message="required">Required</div>
+<!-- TO DO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
         </div>
 		</md-input-container>
       </form>
