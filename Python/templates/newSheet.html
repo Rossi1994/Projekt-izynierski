@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Python Flask App</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+ 
+    <script type="text/javascript">
+    $(function() {
+        $('#btnNewSheet').click(function() {
+     
+            $.ajax({
+                url: '/newSheet',
+                data: $('form').serialize(),
+                type: 'POST',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+    </script>
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-left">
+                    <li role="presentation" class="active"><a href="javascript:history.back()">Wstecz</a>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/logout">Wyloguj</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted"><center>Python Flask</center></h3>
+        </div>
+ 
+        <div class="jumbotron">
+            <h2>
+                <label for="inputSheetName" class="sr-only">Sheet Name</label>
+                <input type="name" id="inputSheetName" class="form-control3" placeholder="Nazwa arkusza" required autofocus>
+            </h2>
+            <h3>Generowanie arkusza</h3>
+            <form class="form-signin2">
+                <label for="inputItems" class="sr-only">Items</label>
+                <input type="number" name="quantity" id="inputItems" class="form-control2" placeholder="Przedmioty" required>
+                <label for="inputOperators" class="sr-only">Operators</label>
+                <input type="number" name="quantity" id="inputOperators" class="form-control2" placeholder="Operatorzy" required>
+                <label for="inputChars" class="sr-only">Chars</label>
+                <input type="number" name="quantity" id="inputChars" class="form-control2" placeholder="Cechy" required>
+            </form>
+            <h4><label for="inputTrials" class="sr-only">Trials</label>
+                <input type="number" name="quantity" id="inputTrials" class="form-control2" placeholder="Prób" min="0" max="5" required>
+            </h4>
+            <h5><a id="btnNewSheet" class="btn btn-lg btn-success" href="sheet" role="button">Wygeneruj arkusz</a>
+            </h5>
+        </div>
+ 
+ 
+ 
+        <footer class="footer">
+            <p>&copy; UAM 2016</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
+
+<!--    KAWAŁEK KODU DOTYCZĄCEGO KOMUNIKACJI POMIĘDZY JS A PYTHON (FLASK)
+
+@app.route('/newSheet', methods=['POST','GET'])
+def newSheet():
+    try:
+        _sheet_name = request.form['inputSheetName']
+        _number_items = request.form['inputItems']
+        _number_operators = request.form['inputOperators']
+        _number_chars = request.form['inputChars']
+        _number_trials = request.form['inputTrials']
+        
+        if _sheet_name and _number_items and _number_operators and _number_chars and _number_trials:
+            conn = mysql.connect()
+            cursor = conn.cursor()
+            cursor.callproc('nowyArkusz',(_sheet_name, _number_items,_number_operators,_number_chars, _number_trials))
+            data = cursor.fetchall()
+            
+            if len(data) is 0:
+                conn.commit()
+                return redirect('/sheet')
+                #return json.dumps({'message':'Arkusz stworzono poprawnie!'})
+            else:
+                return json.dumps({'error':str(data[0])})
+        else:
+            return json.dumps({'html':'<span>Enter the required fields</span>'})
+    except Exception as e:
+        return json.dumps({'error':str(e)})
+    finally:
+        cursor.close() 
+        conn.close()
+    #return render_template('newSheet.html')-->
