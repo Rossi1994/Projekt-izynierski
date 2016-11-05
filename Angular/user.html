@@ -20,15 +20,28 @@
 	</div>
 	<div>
 	<section layout="row">
-	<md-button class="md-fab md-primary" ng-href="{{UAMUrl}}">
-        UAM
-	</md-button>
-    <md-button class="md-fab md-primary" ng-href="{{WMIUrl}}">
-		WMI
-	</md-button>
-    <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
-		<i class="material-icons md-24">settings_power</i>
-	</md-button>
+	<md-fab-toolbar md-open="false"
+                  md-direction="left">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab md-primary">
+		<i class="material-icons md-24">reorder</i>
+      </md-button>
+    </md-fab-trigger>
+
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button class="md-fab md-primary" ng-href="{{UAMUrl}}">
+			UAM
+		</md-button>
+		<md-button class="md-fab md-primary" ng-href="{{WMIUrl}}">
+			WMI
+		</md-button>
+		<md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
+			<i class="material-icons md-24">settings_power</i>
+		</md-button>
+      </md-fab-actions>
+    </md-toolbar>
+	</md-fab-toolbar>
 	</section>
 	</div>
   </md-toolbar>
