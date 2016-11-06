@@ -19,17 +19,34 @@
       </h1>
 	</div>
 	<div>
-	<section layout="row" layout-sm="column">
-	<md-button class="md-fab md-primary" ng-href="{{UAMUrl}}">
-        AMU
-	</md-button>
-    <md-button class="md-fab md-primary" ng-href="{{WMIUrl}}">
-		WMI
-	</md-button>
-    <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
-		<i class="material-icons md-24">settings_power</i>
-	</md-button>
-	</section>
+<!--linki zewnętrzne start-->
+    <md-content layout="column" id="links" flex>
+      <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
+  <md-content md-theme="docs-dark">
+	<md-fab-toolbar md-open="false" md-direction="left">
+    <md-fab-trigger>
+      <md-button class="md-fab md-primary">
+		<i class="material-icons">reorder</i>
+      </md-button>
+    </md-fab-trigger>
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
+			<i class="material-icons md-24">settings_power</i>
+		</md-button>
+		<md-button class="md-fab md-primary" target="_blank" ng-href="{{WMIUrl}}">
+			WMI
+		</md-button>
+		<md-button class="md-fab md-primary" target="_blank" ng-href="{{UAMUrl}}">
+			UAM
+		</md-button>
+      </md-fab-actions>
+    </md-toolbar>
+	</md-fab-toolbar>
+  </md-content>
+	  </div>
+    </md-content>
+<!--linki zewnętrzne end-->
 	</div>
   </md-toolbar>
   
