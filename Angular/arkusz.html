@@ -77,6 +77,10 @@
       <form name="userForm">
         {{serwis}}
 			<div layout-gt-sm="row">
+			<!--Chipsy start-->
+			<md-chips ng-model="AppCtrl.editableFruitNames" readonly="AppCtrl.readonly" md-removable="AppCtrl.removable"
+              md-enable-chip-edit="true"></md-chips>
+			<!--Chipsy end-->
 			  <md-input-container class="md-block" flex-gt-sm>
 				<label>Liczba operatorow</label>
 				<input ng-model="badanie.liczbaOperatorow" type="number" min="1">

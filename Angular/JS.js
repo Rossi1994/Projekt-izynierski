@@ -1,4 +1,4 @@
-var app = angular.module('BlankApp', ['ngMaterial']);
+var app = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
 
 app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav) {
 //button//
