@@ -64,13 +64,7 @@
          templateUrl: 'traits.html',
          controller: 'traitsController'
      })
-    
-
-       
 }])
-
-
-
 
 a.controller('traitsController', ['$scope', 'spreadSheetDataFactory', function ($scope, spreadSheetDataFactory) {
    

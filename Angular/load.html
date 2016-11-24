@@ -1,106 +1,106 @@
 <html ng-app="BlankApp">
 
 <head>
-  <link rel="stylesheet" href="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v0.11.2/angular-material.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="CSS.css">
-  <meta name="viewport" content="initial-scale=1" />
-  <title>Engineer project UAM</title>
+    <link rel="stylesheet" href="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v0.11.2/angular-material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+    <meta name="viewport" content="initial-scale=1" />
+    <title>Engineer project UAM</title>
 </head>
 
 <body layout="column" ng-controller="AppCtrl">
-  <md-toolbar layout="row">
-    <div class="md-toolbar-tools">
-      <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
       </button>
-      <h1 layout-align-gt-sm="center">
-        <md-button ng-href="{{userUrl}}">Engineer project</md-button>
-      </h1>
-	</div>
-<!--linki zewnętrzne start-->
-	<div hide-gt-sm>
-    <md-content layout="column" id="links" flex>
-      <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
-	<md-fab-toolbar md-open="false" md-direction="left">
-    <md-fab-trigger>
-      <md-button class="md-fab md-primary">
-		<i class="material-icons">reorder</i>
-      </md-button>
-    </md-fab-trigger>
-    <md-toolbar>
-      <md-fab-actions class="md-toolbar-tools">
-        <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
-			<i class="material-icons md-24">settings_power</i>
-		</md-button>
-		<md-button class="md-fab md-primary" target="_blank" ng-href="{{WMIUrl}}">
-			WMI
-		</md-button>
-		<md-button class="md-fab md-primary" target="_blank" ng-href="{{UAMUrl}}">
-			UAM
-		</md-button>
-      </md-fab-actions>
-    </md-toolbar>
-	</md-fab-toolbar>
-	  </div>
-    </md-content>
-	</div>
-	<div hide-xs hide-sm layout="row">
-	<md-button class="md-fab md-primary" target="_blank" ng-href="{{UAMUrl}}">
-		UAM
-	</md-button>
-	<md-button class="md-fab md-primary" target="_blank" ng-href="{{WMIUrl}}">
-		WMI
-	</md-button>
-	<md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
-		<i class="material-icons md-24">settings_power</i>
-	</md-button>
-	</div>
-<!--linki zewnętrzne end-->
-  </md-toolbar>
-  
-  <div layout="row" flex class="change-my-css">
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-		<md-button ng-href="{{arkuszUrl}}">stworz arkusz</md-button>
-		<md-button ng-href="{{loadUrl}}">wczytaj szablon</md-button>
-		<md-button>zlec badanie</md-button>
-		<md-button ng-href="{{arkuszUrl}}">przeprowadz badanie</md-button>
-    </md-sidenav>
-
-    <md-content layout="column" id="content" flex class="md-padding">
-		<div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
-  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-  </md-content>
-  <md-content layout-padding>
-    <div>
-	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-      <form name="userForm">
-        <md-input-container>
-        <label>Szukaj po</label>
-        <md-select name="category" ng-model="category" required>
-		  <md-option value="">Empty</md-option>
-          <md-option ng-repeat="category in categories" value="{{category}}">{{category}}</md-option>
-        </md-select>
-		<div class="errors" ng-messages="userForm.category.$error">
-          <div ng-message="required">Required</div>
-<!-- TO DO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <h1 layout-align-gt-sm="center">
+                <md-button ng-href="{{userUrl}}">Engineer project</md-button>
+            </h1>
         </div>
-		</md-input-container>
-      </form>
-	</section>
-	</div>
-	<div>
-	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-      <md-button class="add-tab md-primary md-raised" type="submit">Dalej</md-button>
-    </section>
-	</div>
-  </md-content>
-		</div> 
-    </md-content>
-  </div>
+        <!--linki zewnętrzne start-->
+        <div hide-gt-sm>
+            <md-content layout="column" id="links" flex>
+                <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
+                    <md-fab-toolbar md-open="false" md-direction="left">
+                        <md-fab-trigger>
+                            <md-button class="md-fab md-primary">
+                                <i class="material-icons">reorder</i>
+                            </md-button>
+                        </md-fab-trigger>
+                        <md-toolbar>
+                            <md-fab-actions class="md-toolbar-tools">
+                                <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
+                                    <i class="material-icons md-24">settings_power</i>
+                                </md-button>
+                                <md-button class="md-fab md-primary" target="_blank" ng-href="{{WMIUrl}}">
+                                    WMI
+                                </md-button>
+                                <md-button class="md-fab md-primary" target="_blank" ng-href="{{UAMUrl}}">
+                                    UAM
+                                </md-button>
+                            </md-fab-actions>
+                        </md-toolbar>
+                    </md-fab-toolbar>
+                </div>
+            </md-content>
+        </div>
+        <div hide-xs hide-sm layout="row">
+            <md-button class="md-fab md-primary" target="_blank" ng-href="{{UAMUrl}}">
+                UAM
+            </md-button>
+            <md-button class="md-fab md-primary" target="_blank" ng-href="{{WMIUrl}}">
+                WMI
+            </md-button>
+            <md-button class="md-fab md-primary" ng-href="{{loginUrl}}">
+                <i class="material-icons md-24">settings_power</i>
+            </md-button>
+        </div>
+        <!--linki zewnętrzne end-->
+    </md-toolbar>
 
-      
-  <!-- Angular Material Dependencies -->
+    <div layout="row" flex class="change-my-css">
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-button ng-href="{{arkuszUrl}}">stworz arkusz</md-button>
+            <md-button ng-href="{{loadUrl}}">wczytaj szablon</md-button>
+            <md-button>zlec badanie</md-button>
+            <md-button ng-href="{{arkuszUrl}}">przeprowadz badanie</md-button>
+        </md-sidenav>
+
+        <md-content layout="column" id="content" flex class="md-padding">
+            <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
+                <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+                </md-content>
+                <md-content layout-padding>
+                    <div>
+                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                            <form name="userForm">
+                                <md-input-container>
+                                    <label>Szukaj po</label>
+                                    <md-select name="category" ng-model="category" required>
+                                        <md-option value="">Empty</md-option>
+                                        <md-option ng-repeat="category in categories" value="{{category}}">{{category}}</md-option>
+                                    </md-select>
+                                    <div class="errors" ng-messages="userForm.category.$error">
+                                        <div ng-message="required">Required</div>
+                                        <!-- TO DO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    </div>
+                                </md-input-container>
+                            </form>
+                        </section>
+                    </div>
+                    <div>
+                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                            <md-button class="add-tab md-primary md-raised" type="submit">Dalej</md-button>
+                        </section>
+                    </div>
+                </md-content>
+            </div>
+        </md-content>
+    </div>
+
+
+    <!-- Angular Material Dependencies -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
@@ -109,9 +109,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-	<script src="scripts/material.js"></script>
-	<script src="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v0.11.2/angular-material.js"></script>
-	<script src="JS.js"></script>
+    <script src="scripts/material.js"></script>
+    <script src="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v0.11.2/angular-material.js"></script>
+    <script src="JS.js"></script>
 </body>
 
 </html>
