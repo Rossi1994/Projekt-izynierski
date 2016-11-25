@@ -9,7 +9,7 @@
     <title>Engineer project UAM</title>
 </head>
 
-<body layout="column" ng-controller="AppCtrl">
+<body layout="column" ng-controller="BasicDemoCtrl">
     <md-toolbar layout="row">
         <div class="md-toolbar-tools">
             <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
@@ -21,7 +21,7 @@
         <!--linki zewnętrzne start-->
         <div hide-gt-sm>
             <md-content layout="column" id="links" flex>
-                <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
+                <div ng-controller="BasicDemoCtrl" layout="column" ng-cloak class="md-inline-form">
                     <md-fab-toolbar md-open="false" md-direction="left">
                         <md-fab-trigger>
                             <md-button class="md-fab md-primary">
@@ -78,22 +78,39 @@
                                 {{serwis}}
                                 <div layout-gt-sm="row">
                                     <!--Chipsy start-->
-                                    <md-chips ng-model="BasicDemoCtrl.FruitNames" readonly="BasicDemoCtrl.readonly" md-removable="BasicDemoCtrl.removable" md-enable-chip-edit="true"></md-chips>
+                                    <div ng-controller="BasicDemoCtrl as ctrl" layout="column" ng-cloak>
+                                        <md-content class="md-padding" layout="column">
+                                            <h2 class="md-title">Operatorzy</h2>
+                                            <md-chips ng-model="ctrl.editableFruitNames" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
+                                        </md-content>
+                                    </div>
                                     <!--Chipsy end-->
+                                </div>
+                                <div layout-gt-sm="row">
                                     <md-input-container class="md-block" flex-gt-sm>
-                                        <label>Liczba operatorow</label>
-                                        <input ng-model="badanie.liczbaOperatorow" type="number" min="1">
+                                        <label>Cecha</label>
+                                        <input ng-model="badanie.tytul" type="text">
                                     </md-input-container>
+                                </div>
+                                <div layout-gt-sm="row">
+                                    <div ng-controller="BasicDemoCtrl as ctrl" layout="column" ng-cloak>
+                                        <md-content class="md-padding" layout="column">
+                                            <md-chips ng-model="ctrl.editableFruitNames" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
+                                        </md-content>
+                                    </div>
+                                </div>
+                                <div layout-gt-sm="row">
                                     <md-input-container class="md-block" flex-gt-sm>
                                         <label>Liczba cech</label>
                                         <input ng-model="badanie.liczbaCech" type="number" min="1">
                                     </md-input-container>
+
+                                </div>
+                                <div layout-gt-sm="row">
                                     <md-input-container class="md-block" flex-gt-sm>
                                         <label>Liczba produktow</label>
                                         <input ng-model="badanie.liczbaProduktow" type="number" min="5">
                                     </md-input-container>
-                                </div>
-                                <div layout-gt-sm="row">
                                     <md-input-container class="md-block" flex-gt-sm>
                                         <label>Liczba powtorzen</label>
                                         <input ng-model="badanie.liczbaPowtorzen" type="number" min="1">

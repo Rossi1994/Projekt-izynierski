@@ -1,5 +1,6 @@
 "use strict"
 var app = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+/*
 app.config(['$mdIconProvider', function($mdIconProvider) {
     $mdIconProvider.icon('md-close', 'img/icons/ic_close_24px.svg', 24);
 }])
@@ -50,6 +51,7 @@ function pewnosc(x) {
         window.location.href = x;
     } else {}
 }
+*/
 app.controller('BasicDemoCtrl', DemoCtrl);
 
 function DemoCtrl($timeout, $q) {
@@ -58,9 +60,7 @@ function DemoCtrl($timeout, $q) {
     self.readonly = false;
 
     // Lists of fruit names and Vegetable objects
-    self.fruitNames = ['Apple', 'Banana', 'Orange'];
-    self.roFruitNames = angular.copy(self.fruitNames);
-    self.editableFruitNames = angular.copy(self.fruitNames);
+    self.editableFruitNames = ['Andrzej Małkowski', 'Krzysztof Dyczkowski'];
 
     self.tags = [];
     self.vegObjs = [{
@@ -83,5 +83,4 @@ function DemoCtrl($timeout, $q) {
             type: 'unknown'
         };
     };
-}
-})();
+};
