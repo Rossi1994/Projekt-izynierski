@@ -61,26 +61,4 @@ function DemoCtrl($timeout, $q) {
 
     // Lists of fruit names and Vegetable objects
     self.editableFruitNames = ['Andrzej Małkowski', 'Krzysztof Dyczkowski'];
-
-    self.tags = [];
-    self.vegObjs = [{
-            'name': 'Broccoli',
-            'type': 'Brassica'
-        },
-        {
-            'name': 'Cabbage',
-            'type': 'Brassica'
-        },
-        {
-            'name': 'Carrot',
-            'type': 'Umbelliferous'
-        }
-    ];
-
-    self.newVeg = function(chip) {
-        return {
-            name: chip,
-            type: 'unknown'
-        };
-    };
 };
