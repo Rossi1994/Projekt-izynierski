@@ -1,9 +1,0 @@
-﻿<ui-select-wrap>
-    <ui-select ng-model="MODEL_COL_FIELD" theme="bootstrap" autofocus append-to-body="true">
-        <ui-select-match placeholder="Wybierz...">{{ COL_FIELD }}</ui-select-match>
-        <ui-select-choices repeat="item in col.colDef.editDropdownOptionsArray | filter: $select.search">
-            <span>{{ item }}</span>
-        </ui-select-choices>
-    </ui-select>
-</ui-select-wrap>
-

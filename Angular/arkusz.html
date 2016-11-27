@@ -9,7 +9,7 @@
     <title>Engineer project UAM</title>
 </head>
 
-<body layout="column" ng-controller="BasicDemoCtrl">
+<body layout="column" ng-controller="AppCtrl">
     <md-toolbar layout="row">
         <div class="md-toolbar-tools">
             <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
@@ -21,7 +21,7 @@
         <!--linki zewnętrzne start-->
         <div hide-gt-sm>
             <md-content layout="column" id="links" flex>
-                <div ng-controller="BasicDemoCtrl" layout="column" ng-cloak class="md-inline-form">
+                <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
                     <md-fab-toolbar md-open="false" md-direction="left">
                         <md-fab-trigger>
                             <md-button class="md-fab md-primary">
@@ -68,14 +68,13 @@
         </md-sidenav>
 
         <md-content layout="column" id="content" flex class="md-padding">
-            <div ng-controller="BasicDemoCtrl" layout="column" ng-cloak class="md-inline-form">
+            <div ng-controller="AppCtrl" layout="column" ng-cloak class="md-inline-form">
                 <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
                 </md-content>
                 <md-content layout-padding>
                     <div>
                         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
                             <form name="userForm">
-                                {{serwis}}
                                 <div layout-gt-sm="row">
                                     <!--Chipsy start-->
                                     <div ng-controller="BasicDemoCtrl as ctrl" layout="column" ng-cloak>
