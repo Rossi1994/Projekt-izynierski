@@ -80,30 +80,31 @@
                                     <div ng-controller="BasicDemoCtrl as ctrl" layout="column" ng-cloak>
                                         <md-content class="md-padding" layout="column">
                                             <h2 class="md-title">Operatorzy</h2>
-                                            <md-chips ng-model="ctrl.editableFruitNames" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
+                                            <md-chips ng-model="ctrl.operatorzy" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
                                         </md-content>
                                     </div>
                                     <!--Chipsy end-->
                                 </div>
                                 <div layout-gt-sm="row">
                                     <md-input-container class="md-block" flex-gt-sm>
+                                        <label>Liczba cech</label>
+                                        <input ng-model="liczbaCech" type="number" min="1">
+                                    </md-input-container>
+                                </div>
+                                <p id="demo">Java {{liczba}}</p>
+                                <button type="button" onclick="document.getElementById('demo').innerHTML={{liczba}}">Click Me!</button>
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" flex-gt-sm>
                                         <label>Cecha</label>
-                                        <input ng-model="badanie.tytul" type="text">
+                                        <input ng-model="badanie.cecha" type="text">
                                     </md-input-container>
                                 </div>
                                 <div layout-gt-sm="row">
                                     <div ng-controller="BasicDemoCtrl as ctrl" layout="column" ng-cloak>
                                         <md-content class="md-padding" layout="column">
-                                            <md-chips ng-model="ctrl.editableFruitNames" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
+                                            <md-chips ng-model="ctrl.operatorzy" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
                                         </md-content>
                                     </div>
-                                </div>
-                                <div layout-gt-sm="row">
-                                    <md-input-container class="md-block" flex-gt-sm>
-                                        <label>Liczba cech</label>
-                                        <input ng-model="badanie.liczbaCech" type="number" min="1">
-                                    </md-input-container>
-
                                 </div>
                                 <div layout-gt-sm="row">
                                     <md-input-container class="md-block" flex-gt-sm>

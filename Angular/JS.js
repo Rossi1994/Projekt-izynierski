@@ -29,7 +29,8 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav) 
         "Nazwa części",
         "Nazwa elementu"
     ];
-    self.fruitNames = ['Apple', 'Banana', 'Orange'];
+    $scope.liczba = 5;
+    $scope.liczbaCech = 1;
     //layout//
     $scope.toggleSidenav = function(menuId) {
         $mdSidenav(menuId).toggle();
@@ -57,5 +58,10 @@ function DemoCtrl($timeout, $q) {
 
     self.readonly = false;
 
-    self.editableFruitNames = ['Andrzej Małkowski', 'Krzysztof Dyczkowski'];
+    self.operatorzy = ['Andrzej Małkowski', 'Krzysztof Dyczkowski'];
 };
+////////////////////////////////////
+
+/*for (i = 0; i < liczbaCech + 1; i++) {
+    liczba += "<div layout-gt-sm=\"row\"><md-input-container class=\"md-block\" flex-gt-sm><label>Cecha</label><input ng-model=\"badanie.cecha\" type=\"text\"></md-input-container></div><div layout-gt-sm=\"row\"><div ng-controller=\"BasicDemoCtrl as ctrl\" layout=\"column\" ng-cloak><md-content class=\"md-padding\" layout=\"column\"><md-chips ng-model=\"ctrl.operatorzy\" readonly=\"ctrl.readonly\" md-removable=\"ctrl.removable\" md-enable-chip-edit=\"true\"></md-chips></md-content></div></div>"
+}*/
