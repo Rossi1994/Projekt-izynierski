@@ -85,81 +85,242 @@
                                     </div>
                                     <!--Chipsy end-->
                                 </div>
-                                <div layout-gt-sm="row">
+                                <!--switch start-->
+                                <div ng-controller="ExampleController">
                                     <md-input-container class="md-block" flex-gt-sm>
                                         <label>Liczba cech</label>
-                                        <input ng-model="liczbaCech" type="number" min="1">
+                                        <input ng-model="brak" type="number" min="1" max="4">
                                     </md-input-container>
-                                </div>
-                                <p id="demo">Java {{liczba}}</p>
-                                <button type="button" onclick="document.getElementById('demo').innerHTML={{liczba}}">Click Me!</button>
-                                <div layout-gt-sm="row">
-                                    <md-input-container class="md-block" flex-gt-sm>
-                                        <label>Cecha</label>
-                                        <input ng-model="badanie.cecha" type="text">
-                                    </md-input-container>
-                                </div>
-                                <div layout-gt-sm="row">
-                                    <div ng-controller="BasicDemoCtrl as ctrl" layout="column" ng-cloak>
-                                        <md-content class="md-padding" layout="column">
-                                            <md-chips ng-model="ctrl.operatorzy" readonly="ctrl.readonly" md-removable="ctrl.removable" md-enable-chip-edit="true"></md-chips>
-                                        </md-content>
+
+
+                                    <select ng-model=" selection " ng-options="item for item in items ">
+                                        </select>
+                                    <div class="animate-switch-container " ng-switch on="selection ">
+                                        <div class="animate-switch " ng-switch-when="1 ">
+                                            <div layout-gt-sm="row ">
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 1</label><input type="text "></md-input-container>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="animate-switch " ng-switch-when="2 ">
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 1</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 2</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="animate-switch " ng-switch-when="3 ">
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 1</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 2</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 3</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="animate-switch " ng-switch-when="4 ">
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 1</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 2</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 3</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm><label>Cecha 4</label><input type="text "></md-input-container>
+                                                <fieldset class="standard ">
+                                                    <legend>SuperCecha</legend>
+                                                    <md-checkbox aria-label="Finished? ">
+                                                        SuperCecha
+                                                    </md-checkbox>
+                                                </fieldset>
+                                            </div>
+                                            <div layout-gt-sm="row ">
+                                                <div ng-controller="BasicDemoCtrl as ctrl " layout="column " ng-cloak>
+                                                    <md-content class="md-padding " layout="column ">
+                                                        <md-chips ng-model="ctrl.operatorzy " readonly="ctrl.readonly " md-removable="ctrl.removable " md-enable-chip-edit="true "></md-chips>
+                                                    </md-content>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div layout-gt-sm="row">
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                <!--switch end-->
+                                <div layout-gt-sm="row ">
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Liczba produktow</label>
-                                        <input ng-model="badanie.liczbaProduktow" type="number" min="5">
+                                        <input ng-model="badanie.liczbaProduktow " type="number " min="5 ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Liczba powtorzen</label>
-                                        <input ng-model="badanie.liczbaPowtorzen" type="number" min="1">
+                                        <input ng-model="badanie.liczbaPowtorzen " type="number " min="1 ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Tytul</label>
-                                        <input ng-model="badanie.tytul" type="text">
+                                        <input ng-model="badanie.tytul " type="text ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Nazwa firmy/wydzial</label>
-                                        <input id="nazwaFirmy" ng-model="badanie.nazwaFirmy" type="text">
+                                        <input id="nazwaFirmy " ng-model="badanie.nazwaFirmy " type="text ">
                                     </md-input-container>
                                 </div>
-                                <div layout-gt-sm="row">
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                <div layout-gt-sm="row ">
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Odpowiedzialny</label>
-                                        <input ng-model="badanie.odpowiedzialny" type="text">
+                                        <input ng-model="badanie.odpowiedzialny " type="text ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Klient</label>
-                                        <input ng-model="baanie.klient" type="text">
+                                        <input ng-model="baanie.klient " type="text ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Proces</label>
-                                        <input ng-model="badanie.proces" type="text">
+                                        <input ng-model="badanie.proces " type="text ">
                                     </md-input-container>
-                                    <md-datepicker ng-model="submissionDate" md-placeholder="Enter date">
+                                    <md-datepicker ng-model="submissionDate " md-placeholder="Enter date ">
                                     </md-datepicker>
                                 </div>
-                                <div layout-gt-sm="row">
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                <div layout-gt-sm="row ">
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Stanowisko</label>
-                                        <input ng-model="badanie.stanowisko" type="text">
+                                        <input ng-model="badanie.stanowisko " type="text ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Nazwa czesci</label>
-                                        <input ng-model="badanie.nazwaCzesci" type="text">
+                                        <input ng-model="badanie.nazwaCzesci " type="text ">
                                     </md-input-container>
-                                    <md-input-container class="md-block" flex-gt-sm>
+                                    <md-input-container class="md-block " flex-gt-sm>
                                         <label>Nazwa elementu</label>
-                                        <input ng-model="badanie.nazwaElementu" type="text">
+                                        <input ng-model="badanie.nazwaElementu " type="text ">
                                     </md-input-container>
                                 </div>
                             </form>
                         </section>
                     </div>
                     <div>
-                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                            <md-button ng-href="#traits" ng-cLick="zlecBadanie()" class="add-tab md-primary md-raised" type="submit">Dalej</md-button>
+                        <section layout="row " layout-sm="column " layout-align="center center " layout-wrap>
+                            <md-button ng-href="#traits " ng-cLick="zlecBadanie() " class="add-tab md-primary md-raised " type="submit ">Dalej</md-button>
                         </section>
                     </div>
                 </md-content>
@@ -170,16 +331,16 @@
 
     <!-- Angular Material Dependencies -->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js "></script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-    <script src="scripts/material.js"></script>
-    <script src="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v0.11.2/angular-material.js"></script>
-    <script src="JS.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js "></script>
+    <script src="scripts/material.js "></script>
+    <script src="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v0.11.2/angular-material.js "></script>
+    <script src="JS.js "></script>
 </body>
 
 </html>
